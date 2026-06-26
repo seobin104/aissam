@@ -27,7 +27,7 @@
   </g>
 
   <!-- 앱 이름 -->
-  <text x="318" y="252" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#111" letter-spacing="-0.5">AI쌤의 참교육</text>
+  <text x="318" y="252" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#111" letter-spacing="-0.5">AI쌤</text>
   <!-- 설명 -->
   <text x="318" y="292" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#888">소상공인·직장인·학생·시니어 모두를 위한</text>
   <text x="318" y="314" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#888">하루 10분 AI 학습 앱</text>

@@ -30,7 +30,7 @@ export default function Onboarding() {
           }}>🤖</div>
 
           <h1 style={{ fontSize: 26, fontWeight: 700, color: 'var(--gray-900)', lineHeight: 1.3, marginBottom: 12, letterSpacing: '-0.5px' }}>
-            AI쌤의 참교육
+            AI쌤
           </h1>
           <p style={{ fontSize: 15, color: 'var(--gray-500)', lineHeight: 1.6, marginBottom: 6 }}>
             소상공인·직장인·학생·시니어 모두를 위한<br />하루 10분 AI 학습 앱
