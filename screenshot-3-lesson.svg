@@ -1,0 +1,77 @@
+<svg width="636" height="1048" viewBox="0 0 636 1048" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="636" height="1048" fill="white"/>
+
+  <!-- 상태바 -->
+  <text x="28" y="38" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111">9:41</text>
+  <rect x="530" y="24" width="76" height="16" rx="8" fill="#111" opacity="0.15"/>
+  <rect x="494" y="24" width="28" height="16" rx="4" fill="#111" opacity="0.15"/>
+
+  <!-- 상단 진행 바 -->
+  <rect x="0" y="52" width="636" height="6" rx="3" fill="#f0f0f0"/>
+  <rect x="0" y="52" width="254" height="6" rx="3" fill="#3182f6"/>
+
+  <!-- 헤더 -->
+  <!-- 뒤로 가기 버튼 -->
+  <rect x="16" y="74" width="40" height="40" rx="12" fill="#f8f8f8"/>
+  <text x="36" y="100" text-anchor="middle" font-family="system-ui" font-size="20" fill="#666">←</text>
+
+  <!-- 문제 번호 -->
+  <text x="318" y="100" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#3182f6">2 / 5</text>
+
+  <!-- 레슨 제목 -->
+  <text x="318" y="148" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#111">AI에게 제대로 말 걸기</text>
+
+  <!-- 문제 카드 -->
+  <rect x="16" y="172" width="604" height="298" rx="20" fill="#f8f8f8"/>
+
+  <!-- 문제 라벨 -->
+  <rect x="36" y="192" width="62" height="24" rx="12" fill="#ebf3ff"/>
+  <text x="67" y="209" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3182f6">문제 2</text>
+
+  <!-- 문제 텍스트 -->
+  <text x="36" y="248" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111">다음 상황에서 AI에게</text>
+  <text x="36" y="272" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111">더 좋은 답을 얻을 수 있는</text>
+  <text x="36" y="296" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111">프롬프트를 작성해보세요.</text>
+
+  <!-- 구분선 -->
+  <line x1="36" y1="318" x2="600" y2="318" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- 상황 설명 -->
+  <text x="36" y="348" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#555">상황: 내일 팀장에게 제출할 주간 업무</text>
+  <text x="36" y="370" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#555">보고서를 작성해야 합니다. 이번 주에</text>
+  <text x="36" y="392" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#555">신규 고객 3건, 제안서 2건 완료했어요.</text>
+  <text x="36" y="420" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#3182f6" font-weight="600">→ 포함해야 할 키워드: 목적, 역할, 형식</text>
+  <text x="36" y="450" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#555">목표 점수: 70점 이상</text>
+
+  <!-- 힌트 / 예시 버튼 -->
+  <rect x="16" y="486" width="292" height="48" rx="14" fill="#f8f8f8" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="162" y="516" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#555">💡 힌트 보기</text>
+
+  <rect x="328" y="486" width="292" height="48" rx="14" fill="#f8f8f8" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="474" y="516" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#555">📋 예시 답안</text>
+
+  <!-- 입력 영역 -->
+  <rect x="16" y="550" width="604" height="200" rx="18" fill="white" stroke="#3182f6" stroke-width="2"/>
+  <text x="36" y="582" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#111">당신은 직장인 보고서 전문가입니다.</text>
+  <text x="36" y="606" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#111">다음 내용으로 팀장님께 제출할 주간</text>
+  <text x="36" y="630" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#111">업무 보고서를 표 형식으로 작성해줘.</text>
+  <text x="36" y="654" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#111">- 신규 고객 3건 계약 완료</text>
+  <text x="36" y="678" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#111">- 제안서 2건 제출</text>
+  <!-- 커서 -->
+  <rect x="36" y="692" width="2" height="20" rx="1" fill="#3182f6" opacity="0.8"/>
+  <!-- 글자 수 -->
+  <text x="600" y="738" text-anchor="end" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#bbb">102 / 500</text>
+
+  <!-- 제출 버튼 -->
+  <rect x="16" y="770" width="604" height="60" rx="16" fill="#3182f6"/>
+  <text x="318" y="808" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="white">제출하기</text>
+
+  <!-- 하단 네비게이션 -->
+  <rect x="0" y="964" width="636" height="84" fill="white"/>
+  <line x1="0" y1="964" x2="636" y2="964" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="159" y="998" text-anchor="middle" font-family="system-ui" font-size="24">🏠</text>
+  <text x="159" y="1020" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#aaa">홈</text>
+  <text x="477" y="998" text-anchor="middle" font-family="system-ui" font-size="24">👤</text>
+  <text x="477" y="1020" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#aaa">내 정보</text>
+</svg>

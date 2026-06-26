@@ -1,0 +1,41 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="600" height="600" rx="140" fill="#3182f6"/>
+
+  <!-- 졸업모 챙 -->
+  <polygon points="300,82 438,144 300,206 162,144" fill="white" opacity="0.95"/>
+
+  <!-- 졸업모 꼭대기 박스 -->
+  <rect x="272" y="196" width="56" height="44" rx="6" fill="white" opacity="0.95"/>
+
+  <!-- 졸업모 끈 (오른쪽) -->
+  <rect x="413" y="144" width="18" height="66" rx="9" fill="white" opacity="0.82"/>
+  <!-- 끈 끝 방울 -->
+  <circle cx="422" cy="218" r="18" fill="white" opacity="0.82"/>
+
+  <!-- 안테나 줄기 -->
+  <rect x="284" y="200" width="32" height="46" rx="16" fill="white" opacity="0.9"/>
+
+  <!-- 로봇 머리 -->
+  <rect x="158" y="244" width="284" height="224" rx="64" fill="white" opacity="0.97"/>
+
+  <!-- 눈 왼쪽 -->
+  <rect x="194" y="300" width="88" height="58" rx="29" fill="#3182f6"/>
+  <!-- 눈 오른쪽 -->
+  <rect x="318" y="300" width="88" height="58" rx="29" fill="#3182f6"/>
+
+  <!-- 눈 하이라이트 왼쪽 -->
+  <circle cx="230" cy="316" r="10" fill="white" opacity="0.5"/>
+  <circle cx="250" cy="316" r="10" fill="white" opacity="0.5"/>
+  <!-- 눈 하이라이트 오른쪽 -->
+  <circle cx="354" cy="316" r="10" fill="white" opacity="0.5"/>
+  <circle cx="374" cy="316" r="10" fill="white" opacity="0.5"/>
+
+  <!-- 입 -->
+  <rect x="218" y="388" width="164" height="28" rx="14" fill="#3182f6" opacity="0.45"/>
+
+  <!-- 볼 왼쪽 -->
+  <circle cx="186" cy="386" r="22" fill="#60a5fa" opacity="0.5"/>
+  <!-- 볼 오른쪽 -->
+  <circle cx="414" cy="386" r="22" fill="#60a5fa" opacity="0.5"/>
+</svg>

@@ -8,6 +8,7 @@ interface UserStore {
   user: User | null;
   isOnboarded: boolean;
   dailyLessonsCompleted: number;
+  bonusLessonsToday: number;
   lastResetDate: string;
 
   initUser: (name: string, userType: UserType) => void;
@@ -18,6 +19,7 @@ interface UserStore {
   earnBadge: (badgeId: string) => void;
   checkBadges: () => string[];
   canStudyFree: () => boolean;
+  earnBonusLesson: () => void;
 }
 
 const createInitialUser = (name: string, userType: UserType): User => ({
@@ -40,6 +42,7 @@ export const useUserStore = create<UserStore>()(
       user: null,
       isOnboarded: false,
       dailyLessonsCompleted: 0,
+      bonusLessonsToday: 0,
       lastResetDate: format(new Date(), 'yyyy-MM-dd'),
 
       initUser: (name, userType) => {
@@ -47,6 +50,7 @@ export const useUserStore = create<UserStore>()(
           user: createInitialUser(name, userType),
           isOnboarded: true,
           dailyLessonsCompleted: 0,
+          bonusLessonsToday: 0,
           lastResetDate: format(new Date(), 'yyyy-MM-dd'),
         });
       },
@@ -54,13 +58,18 @@ export const useUserStore = create<UserStore>()(
       checkAndResetDaily: () => {
         const today = format(new Date(), 'yyyy-MM-dd');
         if (get().lastResetDate !== today) {
-          set({ dailyLessonsCompleted: 0, lastResetDate: today });
+          set({ dailyLessonsCompleted: 0, bonusLessonsToday: 0, lastResetDate: today });
         }
       },
 
       canStudyFree: () => {
         get().checkAndResetDaily();
-        return get().dailyLessonsCompleted < 3;
+        const { dailyLessonsCompleted, bonusLessonsToday } = get();
+        return dailyLessonsCompleted < 3 + bonusLessonsToday;
+      },
+
+      earnBonusLesson: () => {
+        set((s) => ({ bonusLessonsToday: s.bonusLessonsToday + 1 }));
       },
 
       updateStreak: () => {

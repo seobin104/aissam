@@ -4,6 +4,7 @@ import { useUserStore } from '../store/userStore';
 import { getLessonsByUserType } from '../data/lessons';
 import ProgressBar from '../components/ui/ProgressBar';
 import { BADGES, DAILY_FREE_LESSONS, USER_TYPE_META } from '../types';
+import { isTossApp, showRewardedAd } from '../lib/tossBridge';
 
 const LEVEL_COLORS = ['#3182f6', '#00b493', '#ff6b00', '#9b59b6', '#e74c3c'];
 const LESSON_EMOJIS = ['🤖', '🎭', '📋', '✍️', '💼', '🎨', '🔧', '🌐', '⚡', '🎯'];
@@ -14,9 +15,10 @@ function getLevelColor(level: number) {
 
 export default function Home() {
   const navigate = useNavigate();
-  const { user, dailyLessonsCompleted, canStudyFree, checkAndResetDaily } = useUserStore();
+  const { user, dailyLessonsCompleted, bonusLessonsToday, canStudyFree, checkAndResetDaily, earnBonusLesson } = useUserStore();
   const [activeTab, setActiveTab] = useState<'home' | 'profile'>('home');
   const [showAdModal, setShowAdModal] = useState(false);
+  const [adLoading, setAdLoading] = useState(false);
 
   if (!user) return null;
   checkAndResetDaily();
@@ -242,7 +244,7 @@ export default function Home() {
         <div
           style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'flex-end', zIndex: 50 }}
           className="animate-fade-in"
-          onClick={() => setShowAdModal(false)}
+          onClick={() => !adLoading && setShowAdModal(false)}
         >
           <div
             style={{
@@ -259,19 +261,43 @@ export default function Home() {
                 오늘 무료 학습을 모두 했어요!
               </h3>
               <p style={{ fontSize: 14, color: 'var(--gray-500)' }}>
-                광고를 보면 추가로 학습할 수 있어요
+                {isTossApp()
+                  ? '광고를 보면 레슨 1개를 더 받을 수 있어요'
+                  : '토스 앱에서 이용하면 광고 보고 추가 학습이 가능해요'}
               </p>
+              {bonusLessonsToday > 0 && (
+                <p style={{ fontSize: 13, color: 'var(--green)', fontWeight: 600, marginTop: 8 }}>
+                  오늘 광고로 +{bonusLessonsToday}개 추가했어요 ✓
+                </p>
+              )}
             </div>
-            <button
-              className="btn btn-primary"
-              style={{ marginBottom: 10 }}
-              onClick={() => {
-                setShowAdModal(false);
-                alert('토스 미니앱 등록 후 인앱 리워드 광고가 활성화됩니다.');
-              }}
-            >
-              광고 보고 계속하기
-            </button>
+            {isTossApp() ? (
+              <button
+                className="btn btn-primary"
+                style={{ marginBottom: 10, opacity: adLoading ? 0.7 : 1 }}
+                disabled={adLoading}
+                onClick={async () => {
+                  setAdLoading(true);
+                  const rewarded = await showRewardedAd('aissam_lesson_reward');
+                  setAdLoading(false);
+                  if (rewarded) {
+                    earnBonusLesson();
+                    setShowAdModal(false);
+                  }
+                }}
+              >
+                {adLoading ? '광고 로딩 중...' : '광고 보고 +1 레슨 받기'}
+              </button>
+            ) : (
+              <div style={{
+                background: 'var(--blue-light)', borderRadius: 16,
+                padding: '14px 16px', marginBottom: 10, textAlign: 'center',
+              }}>
+                <p style={{ fontSize: 13, color: 'var(--blue)', fontWeight: 600, margin: 0 }}>
+                  📱 토스 앱 → 앱인토스에서 이용하세요
+                </p>
+              </div>
+            )}
             <button className="btn btn-secondary" onClick={() => setShowAdModal(false)}>
               내일 다시 오기
             </button>
