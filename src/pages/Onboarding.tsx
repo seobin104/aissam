@@ -30,10 +30,10 @@ export default function Onboarding() {
           }}>🤖</div>
 
           <h1 style={{ fontSize: 26, fontWeight: 700, color: 'var(--gray-900)', lineHeight: 1.3, marginBottom: 12, letterSpacing: '-0.5px' }}>
-            AI 배우기,<br />오늘부터 10분씩
+            AI쌤의 참교육
           </h1>
           <p style={{ fontSize: 15, color: 'var(--gray-500)', lineHeight: 1.6, marginBottom: 6 }}>
-            두오링고처럼 매일 조금씩,<br />누구나 쉽게 AI를 배울 수 있어요.
+            소상공인·직장인·학생·시니어 모두를 위한<br />하루 10분 AI 학습 앱
           </p>
           <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--blue)', marginBottom: 36 }}>
             하루 5문제 · 10분 · 무료
