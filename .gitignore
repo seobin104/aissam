@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# 앱인토스 빌드 산출물
+*.ait
+*.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
