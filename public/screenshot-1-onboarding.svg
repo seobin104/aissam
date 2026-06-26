@@ -1,0 +1,72 @@
+<svg width="636" height="1048" viewBox="0 0 636 1048" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="636" height="1048" fill="white"/>
+
+  <!-- 상태바 -->
+  <text x="28" y="38" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111">9:41</text>
+  <rect x="440" y="24" width="44" height="16" rx="4" fill="#111" opacity="0.15"/>
+  <rect x="494" y="24" width="28" height="16" rx="4" fill="#111" opacity="0.15"/>
+  <rect x="530" y="24" width="76" height="16" rx="8" fill="#111" opacity="0.15"/>
+
+  <!-- 로봇 아이콘 -->
+  <g transform="translate(258, 90) scale(0.2)">
+    <rect width="600" height="600" rx="140" fill="#3182f6"/>
+    <polygon points="300,82 438,144 300,206 162,144" fill="white" opacity="0.95"/>
+    <rect x="272" y="196" width="56" height="44" rx="6" fill="white" opacity="0.95"/>
+    <rect x="413" y="144" width="18" height="66" rx="9" fill="white" opacity="0.82"/>
+    <circle cx="422" cy="218" r="18" fill="white" opacity="0.82"/>
+    <rect x="284" y="200" width="32" height="46" rx="16" fill="white" opacity="0.9"/>
+    <rect x="158" y="244" width="284" height="224" rx="64" fill="white" opacity="0.97"/>
+    <rect x="194" y="300" width="88" height="58" rx="29" fill="#3182f6"/>
+    <rect x="318" y="300" width="88" height="58" rx="29" fill="#3182f6"/>
+    <circle cx="230" cy="316" r="10" fill="white" opacity="0.5"/>
+    <circle cx="354" cy="316" r="10" fill="white" opacity="0.5"/>
+    <rect x="218" y="388" width="164" height="28" rx="14" fill="#3182f6" opacity="0.45"/>
+    <circle cx="186" cy="386" r="22" fill="#60a5fa" opacity="0.5"/>
+    <circle cx="414" cy="386" r="22" fill="#60a5fa" opacity="0.5"/>
+  </g>
+
+  <!-- 앱 이름 -->
+  <text x="318" y="252" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#111" letter-spacing="-0.5">AI쌤의 참교육</text>
+  <!-- 설명 -->
+  <text x="318" y="292" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#888">소상공인·직장인·학생·시니어 모두를 위한</text>
+  <text x="318" y="314" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" fill="#888">하루 10분 AI 학습 앱</text>
+  <!-- 서브 태그 -->
+  <text x="318" y="348" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#3182f6">하루 5문제 · 10분 · 무료</text>
+
+  <!-- 유저 타입 카드 2x2 -->
+  <!-- 소상공인 -->
+  <rect x="28" y="374" width="276" height="104" rx="18" fill="#fff3eb"/>
+  <text x="56" y="416" font-family="system-ui" font-size="32">🏪</text>
+  <text x="100" y="412" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">소상공인</text>
+  <text x="100" y="434" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">가게 운영·마케팅에 AI를</text>
+  <text x="100" y="452" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">활용하고 싶어요</text>
+
+  <!-- 직장인 -->
+  <rect x="332" y="374" width="276" height="104" rx="18" fill="#eef2ff"/>
+  <text x="360" y="416" font-family="system-ui" font-size="32">💼</text>
+  <text x="404" y="412" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">직장인</text>
+  <text x="404" y="434" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">업무 효율을 높이는 데</text>
+  <text x="404" y="452" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">AI를 쓰고 싶어요</text>
+
+  <!-- 학생 -->
+  <rect x="28" y="494" width="276" height="104" rx="18" fill="#f0fdf4"/>
+  <text x="56" y="536" font-family="system-ui" font-size="32">🎓</text>
+  <text x="100" y="532" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">학생</text>
+  <text x="100" y="554" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">공부·자기계발에 AI를</text>
+  <text x="100" y="572" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">활용하고 싶어요</text>
+
+  <!-- 시니어 -->
+  <rect x="332" y="494" width="276" height="104" rx="18" fill="#fdf4ff"/>
+  <text x="360" y="536" font-family="system-ui" font-size="32">🌿</text>
+  <text x="404" y="532" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">시니어</text>
+  <text x="404" y="554" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">일상 생활에서 AI를</text>
+  <text x="404" y="572" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#888">편하게 쓰고 싶어요</text>
+
+  <!-- 시작 버튼 -->
+  <rect x="28" y="628" width="580" height="60" rx="16" fill="#3182f6"/>
+  <text x="318" y="665" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="white">시작하기</text>
+
+  <!-- 푸터 -->
+  <text x="318" y="716" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#bbb">무료로 시작 · 회원가입 불필요</text>
+</svg>

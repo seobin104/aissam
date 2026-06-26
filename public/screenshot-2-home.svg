@@ -1,0 +1,91 @@
+<svg width="636" height="1048" viewBox="0 0 636 1048" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="636" height="1048" fill="#f8f8f8"/>
+
+  <!-- 상태바 -->
+  <text x="28" y="38" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111">9:41</text>
+  <rect x="530" y="24" width="76" height="16" rx="8" fill="#111" opacity="0.15"/>
+  <rect x="494" y="24" width="28" height="16" rx="4" fill="#111" opacity="0.15"/>
+  <rect x="440" y="24" width="44" height="16" rx="4" fill="#111" opacity="0.15"/>
+
+  <!-- 헤더 카드 -->
+  <rect x="0" y="52" width="636" height="156" fill="white"/>
+
+  <!-- 직장인 뱃지 + 레벨 -->
+  <rect x="28" y="70" width="68" height="26" rx="13" fill="#eef2ff"/>
+  <text x="62" y="88" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3182f6">💼 직장인</text>
+  <text x="110" y="88" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#aaa">Lv.1</text>
+
+  <!-- 인사 -->
+  <text x="28" y="120" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#111">박과장님, 안녕하세요 👋</text>
+
+  <!-- XP 라벨 -->
+  <text x="28" y="152" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#888">다음 레벨까지</text>
+  <text x="572" y="152" text-anchor="end" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#888">0 / 100 XP</text>
+
+  <!-- XP 바 -->
+  <rect x="28" y="162" width="580" height="8" rx="4" fill="#f0f0f0"/>
+  <rect x="28" y="162" width="8" height="8" rx="4" fill="#3182f6"/>
+
+  <!-- 오늘의 학습 카드 -->
+  <rect x="16" y="220" width="604" height="108" rx="20" fill="white"/>
+  <text x="36" y="254" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">오늘의 학습</text>
+  <text x="564" y="254" text-anchor="end" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#3182f6">0 / 3 완료</text>
+
+  <!-- 진행 점 -->
+  <rect x="36" y="270" width="568" height="6" rx="3" fill="#f0f0f0"/>
+  <circle cx="214" cy="273" r="8" fill="#f0f0f0"/>
+  <circle cx="318" cy="273" r="8" fill="#f0f0f0"/>
+  <circle cx="422" cy="273" r="8" fill="#f0f0f0"/>
+
+  <text x="36" y="314" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="15" fill="#555">오늘 3개 레슨이 남아있어요!</text>
+
+  <!-- 추천 레슨 타이틀 -->
+  <text x="28" y="362" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111">추천 레슨</text>
+  <text x="594" y="362" text-anchor="end" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#aaa">3개</text>
+
+  <!-- 레슨 카드 1 -->
+  <rect x="16" y="378" width="604" height="96" rx="18" fill="white"/>
+  <rect x="36" y="396" width="56" height="56" rx="16" fill="#ebf3ff"/>
+  <text x="64" y="430" text-anchor="middle" font-family="system-ui" font-size="28">🤖</text>
+  <text x="108" y="420" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111">AI에게 제대로 말 걸기</text>
+  <text x="108" y="442" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#888">막연한 요청 대신 구체적으로 말하는 연습</text>
+  <rect x="108" y="456" width="36" height="20" rx="10" fill="#ebf3ff"/>
+  <text x="126" y="470" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#3182f6">Lv.1</text>
+  <text x="154" y="470" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#bbb"> · 10분 · </text>
+  <text x="204" y="470" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#3182f6">+50 XP</text>
+  <!-- 화살표 -->
+  <text x="590" y="432" text-anchor="end" font-family="system-ui" font-size="20" fill="#ccc">›</text>
+
+  <!-- 레슨 카드 2 -->
+  <rect x="16" y="486" width="604" height="96" rx="18" fill="white"/>
+  <rect x="36" y="504" width="56" height="56" rx="16" fill="#fff3eb"/>
+  <text x="64" y="538" text-anchor="middle" font-family="system-ui" font-size="28">🎭</text>
+  <text x="108" y="528" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111">역할을 줘서 더 좋은 답 얻기</text>
+  <text x="108" y="550" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#888">AI에게 전문가 역할을 부여하는 기술</text>
+  <rect x="108" y="564" width="36" height="20" rx="10" fill="#ebf3ff"/>
+  <text x="126" y="578" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#3182f6">Lv.2</text>
+  <text x="154" y="578" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#bbb"> · 10분 · </text>
+  <text x="204" y="578" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#3182f6">+60 XP</text>
+  <text x="590" y="540" text-anchor="end" font-family="system-ui" font-size="20" fill="#ccc">›</text>
+
+  <!-- 레슨 카드 3 (잠금) -->
+  <rect x="16" y="594" width="604" height="96" rx="18" fill="white" opacity="0.6"/>
+  <rect x="36" y="612" width="56" height="56" rx="16" fill="#f0f0f0"/>
+  <text x="64" y="646" text-anchor="middle" font-family="system-ui" font-size="28">🔒</text>
+  <text x="108" y="636" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#aaa">단계별로 시켜서 복잡한 일 해결하기</text>
+  <text x="108" y="658" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="14" fill="#ccc">복잡한 작업을 단계로 나눠서 요청하는 법</text>
+  <rect x="108" y="672" width="36" height="20" rx="10" fill="#f0f0f0"/>
+  <text x="126" y="686" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#bbb">Lv.3</text>
+  <text x="154" y="686" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="12" fill="#ccc"> · 10분 · +70 XP</text>
+
+  <!-- 하단 네비게이션 -->
+  <rect x="0" y="964" width="636" height="84" fill="white"/>
+  <line x1="0" y1="964" x2="636" y2="964" stroke="#f0f0f0" stroke-width="1"/>
+  <!-- 홈 탭 (활성) -->
+  <text x="159" y="998" text-anchor="middle" font-family="system-ui" font-size="24">🏠</text>
+  <text x="159" y="1020" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#3182f6">홈</text>
+  <!-- 내정보 탭 -->
+  <text x="477" y="998" text-anchor="middle" font-family="system-ui" font-size="24">👤</text>
+  <text x="477" y="1020" text-anchor="middle" font-family="'Pretendard', system-ui, -apple-system, sans-serif" font-size="13" fill="#aaa">내 정보</text>
+</svg>
