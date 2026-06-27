@@ -80,32 +80,33 @@ export default function Lesson() {
     <div style={{ minHeight: '100dvh', display: 'flex', flexDirection: 'column', background: 'var(--white)' }}>
 
       {/* Top bar */}
-      <header style={{ padding: '48px 20px 12px', borderBottom: '1px solid var(--gray-100)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+      <header style={{ padding: '50px 22px 16px', borderBottom: '1.5px solid #e2e8f0', background: 'white' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 14 }}>
           <button
             onClick={() => navigate('/')}
             style={{
-              width: 34, height: 34, borderRadius: 10, border: 'none',
-              background: 'var(--gray-100)', color: 'var(--gray-500)',
+              width: 42, height: 42, borderRadius: 14, border: 'none',
+              background: '#f1f5f9', color: '#64748b',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 18, cursor: 'pointer', flexShrink: 0,
+              fontSize: 20, cursor: 'pointer', flexShrink: 0,
+              fontWeight: 700,
             }}
           >✕</button>
           <div style={{ flex: 1 }}>
-            <div style={{
-              height: 6, background: 'var(--gray-100)', borderRadius: 999, overflow: 'hidden',
-            }}>
+            <div style={{ height: 10, background: '#e2e8f0', borderRadius: 999, overflow: 'hidden' }}>
               <div style={{
-                height: '100%', background: 'var(--blue)', borderRadius: 999,
+                height: '100%',
+                background: 'linear-gradient(90deg, #3182f6, #818cf8)',
+                borderRadius: 999,
                 width: `${pct}%`, transition: 'width 0.5s cubic-bezier(0.4,0,0.2,1)',
               }} />
             </div>
           </div>
-          <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gray-500)', flexShrink: 0 }}>
-            {currentIndex + 1}<span style={{ color: 'var(--gray-300)' }}>/{lesson.problems.length}</span>
+          <span style={{ fontSize: 15, fontWeight: 800, color: '#334155', flexShrink: 0 }}>
+            {currentIndex + 1}<span style={{ color: '#94a3b8', fontWeight: 600 }}>/{lesson.problems.length}</span>
           </span>
         </div>
-        <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--blue)', letterSpacing: 0.2 }}>
+        <div style={{ fontSize: 14, fontWeight: 800, color: '#2563eb', letterSpacing: 0.1 }}>
           {lesson.title}
         </div>
       </header>
@@ -114,40 +115,41 @@ export default function Lesson() {
       {xpFloats.map((f) => (
         <div key={f.id} className="animate-xp-float" style={{
           position: 'fixed', top: 96, right: 20,
-          fontSize: 16, fontWeight: 800, color: 'var(--blue)',
+          fontSize: 18, fontWeight: 800, color: 'var(--blue)',
           pointerEvents: 'none', zIndex: 50,
         }}>+{f.amount} XP</div>
       ))}
 
       {/* Main */}
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '20px 20px 0', overflowY: 'auto' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '24px 22px 0', overflowY: 'auto', background: '#f8fafc' }}>
         <h2 style={{
-          fontSize: 19, fontWeight: 700, color: 'var(--gray-900)',
-          lineHeight: 1.4, marginBottom: 12, letterSpacing: '-0.3px',
+          fontSize: 26, fontWeight: 900, color: '#0f172a',
+          lineHeight: 1.4, marginBottom: 16, letterSpacing: '-0.5px',
         }}>
           {problem.instruction}
         </h2>
 
         {/* Context */}
         <div style={{
-          background: 'var(--gray-50)', borderRadius: 16,
-          padding: '12px 16px', marginBottom: 16,
-          border: '1px solid var(--gray-200)',
+          background: 'white', borderRadius: 18,
+          padding: '16px 20px', marginBottom: 18,
+          border: '1.5px solid #e2e8f0',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
         }}>
-          <p style={{ fontSize: 13, color: 'var(--gray-600)', lineHeight: 1.65 }}>{problem.context}</p>
+          <p style={{ fontSize: 15, color: '#334155', lineHeight: 1.75, fontWeight: 500 }}>{problem.context}</p>
         </div>
 
         {/* Hint */}
         {showHint && (
-          <div className="hint-box animate-slide-down" style={{ marginBottom: 12 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: 'var(--blue)', marginBottom: 8 }}>💡 힌트</p>
+          <div className="hint-box animate-slide-down" style={{ marginBottom: 14 }}>
+            <p style={{ fontSize: 14, fontWeight: 800, color: '#2563eb', marginBottom: 10 }}>💡 힌트</p>
             {problem.hints.slice(0, hintIndex).map((h, i) => (
-              <p key={i} style={{ fontSize: 13, color: 'var(--gray-700)', marginBottom: 4 }}>• {h}</p>
+              <p key={i} style={{ fontSize: 15, color: '#1e3a5f', marginBottom: 7, lineHeight: 1.65, fontWeight: 500 }}>• {h}</p>
             ))}
             {hintIndex < problem.hints.length && (
               <button
                 onClick={() => setHintIndex((n) => n + 1)}
-                style={{ fontSize: 12, fontWeight: 700, color: 'var(--blue)', background: 'none', border: 'none', cursor: 'pointer', padding: 0, marginTop: 4 }}
+                style={{ fontSize: 14, fontWeight: 800, color: '#2563eb', background: 'none', border: 'none', cursor: 'pointer', padding: 0, marginTop: 6 }}
               >
                 힌트 더 보기 ({hintIndex}/{problem.hints.length}) →
               </button>
@@ -157,9 +159,9 @@ export default function Lesson() {
 
         {/* Example */}
         {showExample && (
-          <div className="example-box animate-slide-down" style={{ marginBottom: 12 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: 'var(--green)', marginBottom: 8 }}>📌 예시 프롬프트</p>
-            <p style={{ fontSize: 13, color: 'var(--gray-700)', lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{problem.examplePrompt}</p>
+          <div className="example-box animate-slide-down" style={{ marginBottom: 14 }}>
+            <p style={{ fontSize: 14, fontWeight: 800, color: '#047857', marginBottom: 10 }}>📌 예시 프롬프트</p>
+            <p style={{ fontSize: 15, color: '#1e3a2f', lineHeight: 1.75, whiteSpace: 'pre-wrap', fontWeight: 500 }}>{problem.examplePrompt}</p>
           </div>
         )}
 
@@ -168,27 +170,28 @@ export default function Lesson() {
           <div>
             <textarea
               style={{
-                width: '100%', minHeight: 140, padding: '14px 16px',
-                borderRadius: 16,
-                border: `2px solid ${userInput ? 'var(--blue)' : 'var(--gray-200)'}`,
-                fontSize: 14, fontFamily: 'inherit', color: 'var(--gray-900)',
-                lineHeight: 1.65, resize: 'none', outline: 'none',
-                transition: 'border-color 0.15s',
-                background: stage === 'evaluating' ? 'var(--gray-50)' : 'white',
+                width: '100%', minHeight: 160, padding: '18px 20px',
+                borderRadius: 18,
+                border: `2px solid ${userInput ? '#3182f6' : '#e2e8f0'}`,
+                fontSize: 16, fontFamily: 'inherit', color: '#0f172a',
+                lineHeight: 1.75, resize: 'none', outline: 'none',
+                transition: 'border-color 0.15s, box-shadow 0.15s',
+                background: stage === 'evaluating' ? '#f8fafc' : 'white',
+                boxShadow: userInput ? '0 0 0 3px rgba(49,130,246,0.12)' : 'none',
               }}
               placeholder="여기에 AI에게 보낼 프롬프트를 써보세요..."
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               disabled={stage === 'evaluating'}
             />
-            <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
+            <div style={{ display: 'flex', gap: 10, marginTop: 12 }}>
               {!showHint && (
                 <button
                   onClick={() => { setShowHint(true); setHintIndex(1); }}
                   style={{
-                    flex: 1, padding: '11px 0', borderRadius: 12,
-                    border: '1.5px solid var(--gray-200)', background: 'var(--white)',
-                    fontSize: 13, fontWeight: 600, color: 'var(--gray-600)',
+                    flex: 1, padding: '14px 0', borderRadius: 16,
+                    border: '2px solid #bfdbfe', background: '#eff6ff',
+                    fontSize: 15, fontWeight: 700, color: '#2563eb',
                     cursor: 'pointer', fontFamily: 'inherit',
                   }}
                 >💡 힌트</button>
@@ -197,9 +200,9 @@ export default function Lesson() {
                 <button
                   onClick={() => setShowExample(true)}
                   style={{
-                    flex: 1, padding: '11px 0', borderRadius: 12,
-                    border: '1.5px solid var(--gray-200)', background: 'var(--white)',
-                    fontSize: 13, fontWeight: 600, color: 'var(--gray-600)',
+                    flex: 1, padding: '14px 0', borderRadius: 16,
+                    border: '2px solid #a7f3d0', background: '#ecfdf5',
+                    fontSize: 15, fontWeight: 700, color: '#047857',
                     cursor: 'pointer', fontFamily: 'inherit',
                   }}
                 >📌 예시 보기</button>
@@ -211,53 +214,61 @@ export default function Lesson() {
             <div className="animate-pop-in">
               {/* Score */}
               <div style={{
-                background: feedback.isGoodPrompt ? 'var(--blue-light)' : 'var(--orange-light)',
-                borderRadius: 20, padding: '18px 20px', marginBottom: 12,
+                background: feedback.isGoodPrompt
+                  ? 'linear-gradient(135deg, #eff6ff, #dbeafe)'
+                  : 'linear-gradient(135deg, #fff7ed, #fed7aa)',
+                borderRadius: 22, padding: '22px', marginBottom: 14,
+                border: `1.5px solid ${feedback.isGoodPrompt ? '#bfdbfe' : '#fdba74'}`,
+                boxShadow: feedback.isGoodPrompt
+                  ? '0 4px 16px rgba(49,130,246,0.12)'
+                  : '0 4px 16px rgba(249,115,22,0.12)',
               }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-                  <span style={{ fontWeight: 700, fontSize: 15, color: 'var(--gray-900)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14 }}>
+                  <span style={{ fontWeight: 900, fontSize: 20, color: '#0f172a' }}>
                     {feedback.isGoodPrompt ? '🎉 잘 썼어요!' : '💪 조금 더 발전해봐요'}
                   </span>
-                  <span style={{
-                    fontSize: 26, fontWeight: 800,
-                    color: feedback.score >= 80 ? 'var(--blue)' : feedback.score >= 60 ? 'var(--orange)' : 'var(--red)',
-                  }}>{feedback.score}점</span>
+                  <div style={{
+                    background: feedback.score >= 80 ? '#2563eb' : feedback.score >= 60 ? '#ea580c' : '#dc2626',
+                    color: 'white', borderRadius: 14, padding: '6px 14px',
+                    fontSize: 22, fontWeight: 900, lineHeight: 1,
+                  }}>{feedback.score}점</div>
                 </div>
-                <p style={{ fontSize: 14, color: 'var(--gray-700)', marginBottom: 10, lineHeight: 1.6 }}>
+                <p style={{ fontSize: 16, color: '#1e293b', marginBottom: 14, lineHeight: 1.7, fontWeight: 500 }}>
                   {feedback.feedback}
                 </p>
                 {feedback.improvements.length > 0 && (
-                  <div style={{ marginBottom: 10 }}>
-                    <p style={{ fontSize: 12, fontWeight: 700, color: 'var(--gray-500)', marginBottom: 6 }}>개선 포인트</p>
+                  <div style={{ marginBottom: 14 }}>
+                    <p style={{ fontSize: 14, fontWeight: 800, color: '#475569', marginBottom: 8 }}>개선 포인트</p>
                     {feedback.improvements.map((imp, i) => (
-                      <p key={i} style={{ fontSize: 12, color: 'var(--gray-600)', marginBottom: 3 }}>• {imp}</p>
+                      <p key={i} style={{ fontSize: 14, color: '#334155', marginBottom: 6, lineHeight: 1.65, fontWeight: 500 }}>• {imp}</p>
                     ))}
                   </div>
                 )}
-                <p style={{ fontSize: 13, fontWeight: 700, color: feedback.isGoodPrompt ? 'var(--blue)' : 'var(--orange)' }}>
+                <p style={{ fontSize: 15, fontWeight: 800, color: feedback.isGoodPrompt ? '#1d4ed8' : '#c2410c' }}>
                   {feedback.encouragement}
                 </p>
               </div>
 
               {/* My prompt */}
               <div style={{
-                background: 'var(--gray-50)', borderRadius: 16,
-                padding: '14px 16px', border: '1px solid var(--gray-200)',
+                background: 'white', borderRadius: 18,
+                padding: '18px 20px', border: '1.5px solid #e2e8f0',
               }}>
-                <p style={{ fontSize: 12, fontWeight: 700, color: 'var(--gray-400)', marginBottom: 8 }}>내가 쓴 프롬프트</p>
-                <p style={{ fontSize: 13, color: 'var(--gray-700)', lineHeight: 1.65 }}>{userInput}</p>
+                <p style={{ fontSize: 13, fontWeight: 800, color: '#94a3b8', marginBottom: 10, letterSpacing: 0.5 }}>내가 쓴 프롬프트</p>
+                <p style={{ fontSize: 15, color: '#334155', lineHeight: 1.75, fontWeight: 500 }}>{userInput}</p>
               </div>
             </div>
           )
         )}
 
-        <div style={{ height: 100 }} />
+        <div style={{ height: 110 }} />
       </main>
 
       {/* CTA */}
       <div style={{
-        padding: '12px 20px 32px', background: 'var(--white)',
-        borderTop: '1px solid var(--gray-100)',
+        padding: '14px 22px 34px', background: 'white',
+        borderTop: '1.5px solid #e2e8f0',
+        boxShadow: '0 -4px 16px rgba(0,0,0,0.05)',
       }}>
         {stage === 'problem' || stage === 'evaluating' ? (
           <button
@@ -295,36 +306,41 @@ function CompletionScreen({
       alignItems: 'center', justifyContent: 'center',
       background: 'var(--white)', padding: '40px 24px', textAlign: 'center',
     }} className="animate-fade-in">
-      <div style={{ fontSize: 72, marginBottom: 16 }} className="animate-pop-in">🎊</div>
-      <h2 style={{ fontSize: 24, fontWeight: 800, color: 'var(--gray-900)', letterSpacing: '-0.5px', marginBottom: 6 }}>
+      <div style={{ fontSize: 90, marginBottom: 20 }} className="animate-pop-in">🎊</div>
+      <h2 style={{ fontSize: 34, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.8px', marginBottom: 10 }}>
         레슨 완료!
       </h2>
-      <p style={{ fontSize: 15, color: 'var(--gray-500)', marginBottom: 28 }}>{lesson?.title}</p>
+      <p style={{ fontSize: 17, color: '#64748b', marginBottom: 32, fontWeight: 600 }}>{lesson?.title}</p>
 
       {/* XP */}
-      <div className="card" style={{ width: '100%', marginBottom: 12, padding: '20px' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 40 }}>
-          <div>
-            <div style={{ fontSize: 28, fontWeight: 800, color: 'var(--blue)' }}>+{xpTotal}</div>
-            <div style={{ fontSize: 12, color: 'var(--gray-500)', marginTop: 2 }}>XP 획득</div>
+      <div style={{
+        background: 'linear-gradient(135deg, #eff6ff, #dbeafe)',
+        borderRadius: 24, padding: '26px', width: '100%', marginBottom: 14,
+        border: '1.5px solid #bfdbfe',
+        boxShadow: '0 4px 16px rgba(49,130,246,0.12)',
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 48 }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: 36, fontWeight: 900, color: '#1d4ed8' }}>+{xpTotal}</div>
+            <div style={{ fontSize: 14, color: '#64748b', marginTop: 5, fontWeight: 700 }}>XP 획득</div>
           </div>
-          <div style={{ width: 1, background: 'var(--gray-100)' }} />
-          <div>
-            <div style={{ fontSize: 28, fontWeight: 800, color: 'var(--green)' }}>{lesson?.problems.length}</div>
-            <div style={{ fontSize: 12, color: 'var(--gray-500)', marginTop: 2 }}>문제 완료</div>
+          <div style={{ width: 1.5, background: '#bfdbfe' }} />
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: 36, fontWeight: 900, color: '#047857' }}>{lesson?.problems.length}</div>
+            <div style={{ fontSize: 14, color: '#64748b', marginTop: 5, fontWeight: 700 }}>문제 완료</div>
           </div>
         </div>
       </div>
 
       {/* New badges */}
       {earned.length > 0 && (
-        <div className="card" style={{ width: '100%', marginBottom: 12 }}>
-          <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--gray-900)', marginBottom: 14 }}>🏅 새 뱃지 획득!</p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 20 }}>
+        <div className="card" style={{ width: '100%', marginBottom: 14 }}>
+          <p style={{ fontWeight: 900, fontSize: 19, color: '#0f172a', marginBottom: 18 }}>🏅 새 뱃지 획득!</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 28 }}>
             {earned.map((b) => (
               <div key={b.id} className="animate-pop-in" style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 40, marginBottom: 4 }}>{b.emoji}</div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--gray-700)' }}>{b.name}</div>
+                <div style={{ fontSize: 50, marginBottom: 8 }}>{b.emoji}</div>
+                <div style={{ fontSize: 14, fontWeight: 800, color: '#334155' }}>{b.name}</div>
               </div>
             ))}
           </div>
