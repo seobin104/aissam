@@ -5,7 +5,7 @@ export default defineConfig({
   brand: {
     displayName: 'AI쌤',
     primaryColor: '#3182f6',
-    icon: '',
+    icon: 'https://withaissam.vercel.app/logo-light.png',
   },
   web: {
     host: 'localhost',

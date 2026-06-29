@@ -1,5 +1,7 @@
 <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 배경 -->
+  <!-- 꽉 찬 배경 (투명 모서리 없음) -->
+  <rect width="600" height="600" fill="#3182f6"/>
+  <!-- 안쪽 둥근 배경 장식 -->
   <rect width="600" height="600" rx="140" fill="#3182f6"/>
 
   <!-- 졸업모 챙 -->
